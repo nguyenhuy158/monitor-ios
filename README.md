@@ -1,5 +1,7 @@
 # Monitor iOS
 
+![Monitor](brand/logo.png)
+
 App SwiftUI native cho [alert.huyab.click](https://alert.huyab.click) (Odoo cron
 monitor). Không dependency, `.xcodeproj` viết tay, iOS 16+, iPhone.
 
@@ -28,6 +30,17 @@ xcodebuild -project Monitor.xcodeproj -scheme Monitor -sdk iphoneos \
   -destination 'generic/platform=iOS' -derivedDataPath build/dd \
   -allowProvisioningUpdates CODE_SIGN_STYLE=Automatic DEVELOPMENT_TEAM=<team>
 xcrun devicectl device install app --device <id> build/dd/Build/Products/Debug-iphoneos/Monitor.app
+```
+
+## Logo
+
+`brand/logo.svg` + `brand/icon.svg`, style [KawaiiLogos của SAWARATSUKI](https://github.com/SAWARATSUKI/KawaiiLogos):
+gradient pastel, chữ tròn trắng, mặt kawaii, sparkle. Render lại:
+
+```bash
+rsvg-convert -w 1200 brand/logo.svg -o brand/logo.png
+rsvg-convert -w 1024 -h 1024 brand/icon.svg -o Monitor/Assets.xcassets/AppIcon.appiconset/icon-1024.png
+rsvg-convert -w 264 -h 264 brand/icon.svg -o Monitor/Assets.xcassets/AppIconPreview.imageset/icon.png
 ```
 
 ## Cố tình không làm

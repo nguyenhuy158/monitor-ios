@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8FE3C8"/>
+      <stop offset="0.55" stop-color="#7CC8F0"/>
+      <stop offset="1" stop-color="#A6A8F0"/>
+    </linearGradient>
+    <clipPath id="card">
+      <rect x="0" y="0" width="1200" height="420" rx="72" ry="72"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect x="0" y="0" width="1200" height="420" fill="url(#bg)"/>
+    <!-- bong tron mo cho co chieu sau, dung style KawaiiLogos -->
+    <circle cx="1080" cy="60" r="190" fill="#FFFFFF" opacity="0.16"/>
+    <circle cx="120" cy="400" r="160" fill="#FFFFFF" opacity="0.14"/>
+  </g>
+
+  <!-- The dong ho kawaii -->
+  <g transform="translate(72,80)">
+    <rect x="0" y="8" width="262" height="262" rx="62" fill="#3E4B78" opacity="0.18"/>
+    <rect x="0" y="0" width="262" height="262" rx="62" fill="#FFFFFF"/>
+    <circle cx="131" cy="131" r="96" fill="none" stroke="#5B6BA8" stroke-width="14"/>
+    <!-- kim chi 12:05, lech mot chut cho co ve "sap tre" -->
+    <path d="M131 131 L168 162" stroke="#5B6BA8" stroke-width="15" stroke-linecap="round"/>
+    <path d="M131 131 L96 174" stroke="#F2789F" stroke-width="15" stroke-linecap="round"/>
+    <path d="M118 109 q13 14 26 0" fill="none" stroke="#3E4B78" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="131" cy="131" r="11" fill="#5B6BA8"/>
+    <!-- mat va ma hong -->
+    <circle cx="104" cy="100" r="10" fill="#3E4B78"/>
+    <circle cx="158" cy="100" r="10" fill="#3E4B78"/>
+    <circle cx="86" cy="120" r="12" fill="#F9B4C8" opacity="0.85"/>
+    <circle cx="176" cy="120" r="12" fill="#F9B4C8" opacity="0.85"/>
+    <!-- chuong nho tren dinh -->
+    <path d="M131 20 q22 0 22 16 h-44 q0-16 22-16z" fill="#FFD479"/>
+  </g>
+
+  <!-- Chu -->
+  <text x="382" y="212" font-family="Arial Rounded MT Bold" font-size="132" fill="#FFFFFF">Monitor</text>
+  <text x="386" y="212" font-family="Arial Rounded MT Bold" font-size="132" fill="#3E4B78" opacity="0.12">Monitor</text>
+  <text x="382" y="212" font-family="Arial Rounded MT Bold" font-size="132" fill="#FFFFFF">Monitor</text>
+
+  <!-- Pill phu -->
+  <rect x="386" y="248" width="300" height="76" rx="38" fill="#FFFFFF" opacity="0.92"/>
+  <text x="536" y="299" text-anchor="middle" font-family="Arial Rounded MT Bold" font-size="40" fill="#4F7FA8">odoo cron</text>
+
+  <rect x="702" y="248" width="330" height="76" rx="38" fill="#F2789F"/>
+  <text x="867" y="299" text-anchor="middle" font-family="Arial Rounded MT Bold" font-size="40" fill="#FFFFFF">trễ là báo liền</text>
+
+  <!-- Sparkle -->
+  <g fill="#FFFFFF">
+    <path d="M1092 132 l14 40 40 14 -40 14 -14 40 -14 -40 -40 -14 40 -14z" opacity="0.95"/>
+    <path d="M1076 344 l8 24 24 8 -24 8 -8 24 -8 -24 -24 -8 24 -8z" opacity="0.7"/>
+    <path d="M352 96 l8 22 22 8 -22 8 -8 22 -8 -22 -22 -8 22 -8z" opacity="0.8"/>
+  </g>
+</svg>

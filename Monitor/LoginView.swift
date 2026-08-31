@@ -15,9 +15,11 @@ struct LoginView: View {
         VStack(spacing: 20) {
             Spacer()
 
-            Image(systemName: "bell.badge.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.tint)
+            Image("AppIconPreview")
+                .resizable()
+                .frame(width: 96, height: 96)
+                .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+                .shadow(color: .black.opacity(0.12), radius: 8, y: 4)
 
             VStack(spacing: 4) {
                 Text("Odoo Monitor").font(.largeTitle.bold())
