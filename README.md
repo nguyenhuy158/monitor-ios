@@ -2,7 +2,7 @@
 
 ![Monitor](brand/logo.png)
 
-App SwiftUI native cho [alert.huyab.click](https://alert.huyab.click) (Odoo cron
+App SwiftUI native cho [alert.huyab.cfd](https://alert.huyab.cfd) (Odoo cron
 monitor). Không dependency, `.xcodeproj` viết tay, iOS 16+, iPhone.
 
 ## Màn hình
@@ -13,7 +13,7 @@ monitor). Không dependency, `.xcodeproj` viết tay, iOS 16+, iPhone.
 | **Instance** | Thêm / sửa / nhân bản / đổi thứ tự instance, gửi mail thử. Swipe để thao tác. |
 | **Cài đặt** | Ngưỡng cảnh báo (`alert_delay_minutes`), email đang đăng nhập, đăng xuất. |
 
-Đăng nhập dùng chung SSO `auth.huyab.click`: WKWebView chạy luồng Google, đọc
+Đăng nhập dùng chung SSO `auth.huyab.cfd`: WKWebView chạy luồng Google, đọc
 cookie HttpOnly `huyab_sso` rồi cất vào Keychain.
 
 ## Chạy
