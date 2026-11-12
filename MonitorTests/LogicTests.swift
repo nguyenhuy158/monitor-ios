@@ -74,7 +74,7 @@ final class SsoCookieTests: XCTestCase {
         SsoCookie.install("abc")
         let cookie = HTTPCookieStorage.shared.cookies?.first { $0.name == "huyab_sso" }
         XCTAssertEqual(cookie?.value, "abc")
-        XCTAssertEqual(cookie?.domain, ".huyab.click")
+        XCTAssertEqual(cookie?.domain, ".huyab.cfd")
         XCTAssertTrue(cookie?.isSecure ?? false)
 
         SsoCookie.remove()

@@ -80,7 +80,7 @@ final class ApiClientTests: XCTestCase {
         XCTAssertEqual(me.settings?.alertDelayMinutes, 45)
         XCTAssertEqual(StubProtocol.lastRequest?.httpMethod, "GET")
         XCTAssertEqual(StubProtocol.lastRequest?.url?.absoluteString,
-                       "https://alert.huyab.click/api/me")
+                       "https://alert.huyab.cfd/api/me")
         XCTAssertEqual(StubProtocol.lastRequest?.value(forHTTPHeaderField: "Authorization"),
                        "Bearer tok")
     }

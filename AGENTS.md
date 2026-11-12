@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-Monitor iOS is a native SwiftUI client for alert.huyab.click (Odoo cron
+Monitor iOS is a native SwiftUI client for alert.huyab.cfd (Odoo cron
 monitor). Tabs: Cron (per-instance upcoming/late crons, 30 s auto-refresh),
 Instance (add/edit/duplicate/reorder instances, test mail) and Settings (alert
 delay, account, logout).
@@ -13,17 +13,17 @@ target plus one XCTest target, and the same `Auth.swift` / `API.swift` /
 `LoginView.swift` / `make-ipa.sh` layout.
 
 - **Auth** (`Auth.swift`, `LoginView.swift`): the shared SSO at
-  `auth.huyab.click` only accepts https `redirect_uri` values inside
-  `huyab.click`, so `ASWebAuthenticationSession` with a custom scheme cannot be
+  `auth.huyab.cfd` only accepts https `redirect_uri` values inside
+  `huyab.cfd`, so `ASWebAuthenticationSession` with a custom scheme cannot be
   used. `LoginView` opens a `WKWebView`; once it lands back on
-  `alert.huyab.click`, `WKHTTPCookieStore` reads the HttpOnly `huyab_sso` cookie
+  `alert.huyab.cfd`, `WKHTTPCookieStore` reads the HttpOnly `huyab_sso` cookie
   and the JWT is stored in the Keychain. `SsoToken` never verifies the signature
   (the server does); it only reads `exp` to know when to stop calling the API.
 - **API** (`API.swift`): DTOs are a projection of `server/src/index.ts` in the
   monitor repo (D1 rows, snake_case keys decoded with `convertFromSnakeCase`).
   Declare only fields the app actually uses — Codable ignores unknown keys, so
   new server fields never break the app. `ApiClient` targets
-  `https://alert.huyab.click` and authenticates with `Authorization: Bearer
+  `https://alert.huyab.cfd` and authenticates with `Authorization: Bearer
   <jwt>`. Tests inject a `URLSession` with a fake `URLProtocol`; the app uses
   `URLSession.shared`.
 
@@ -33,7 +33,7 @@ Folder structure:
 Monitor/                    # App target sources (SwiftUI, iOS 16+)
   MonitorApp.swift          #   `@main` app entry + `RootTabs`; `AuthStore` picks login vs tabs
   Auth.swift                #   `SsoToken` (reads JWT `exp` only), `Keychain`, `SsoCookie`, `AuthStore`
-  LoginView.swift           #   WKWebView SSO login via auth.huyab.click
+  LoginView.swift           #   WKWebView SSO login via auth.huyab.cfd
   API.swift                 #   Decodable DTOs + `ApiClient` (URLSession, Bearer auth, snake_case decoding)
   CronsView.swift           #   Cron tab: instance picker, search, late-only filter
   ConfigsView.swift         #   Instance tab: list, `ConfigDraft`, `ConfigForm`
@@ -108,11 +108,11 @@ changes.
 
 ## Ecosystem
 
-See the [huyab.click ecosystem map](https://github.com/nguyenhuy158/kit/blob/main/docs/ECOSYSTEM.md) for how all personal repos connect.
+See the [huyab.cfd ecosystem map](https://github.com/nguyenhuy158/kit/blob/main/docs/ECOSYSTEM.md) for how all personal repos connect.
 
 - Kit packages: none (Swift, zero dependencies; kit is pnpm-only).
-- Talks to: `monitor` API at https://alert.huyab.click (`huyab_sso` cookie +
-  `Authorization: Bearer`), `sso` at https://auth.huyab.click for WebView login.
+- Talks to: `monitor` API at https://alert.huyab.cfd (`huyab_sso` cookie +
+  `Authorization: Bearer`), `sso` at https://auth.huyab.cfd for WebView login.
 
 ## Agent-Specific Instructions
 

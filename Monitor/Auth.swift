@@ -1,6 +1,6 @@
 import Foundation
 
-/// Token la JWT RS256 do auth.huyab.click ky. App KHONG verify chu ky — khong co
+/// Token la JWT RS256 do auth.huyab.cfd ky. App KHONG verify chu ky — khong co
 /// public key va cung khong can: server verify moi request. App chi doc `exp`
 /// de biet khi nao khoi goi API, tranh mot vong 401 chac chan that bai.
 enum SsoToken {
@@ -75,7 +75,7 @@ enum SsoCookie {
         guard let cookie = HTTPCookie(properties: [
             .name: "huyab_sso",
             .value: token,
-            .domain: ".huyab.click",
+            .domain: ".huyab.cfd",
             .path: "/",
             .secure: "TRUE",
         ]) else { return }
